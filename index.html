@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      a { color: green; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      ol { list-style-type: decimal; margin: 30px; }
+      ul { list-style-type: none; padding: 0; margin: 0; }
+      li { margin: 10px 0; }
+      img { vertical-align: middle; margin-right: 10px; }
+      h1 { color: black; font-size: 15px; }
+      h2 { color: white; font-size: 15px; }
+      p { font-family: Arial, sans-serif; line-height: 1.5; color: black; }
+      hr { border: 1px solid #cccccc; margin: 20px 0; }
+
+      /* Стиль для таблиці */
+      table {
+        width: 80%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      table th, table td {
+        padding: 15px;
+        text-align: center;
+        border: 1px solid #ddd;
+      }
+
+      table th {
+        background-color: #FF6347;
+        color: white;
+        font-size: 1.1em;
+      }
+
+      table td {
+        background-color: #fff;
+        color: #333;
+      }
+
+      table tr:nth-child(even) td {
+        background-color: #f2f2f2;
+      }
+
+      table tr:hover td {
+        background-color: #FF6347;
+        color: white;
+      }
+
+      /* Стиль для форми відгуку */
+      form {
+        background-color: #f2f2f2;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      form p {
+        margin: 15px 0;
+      }
+
+      form label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: inline-block;
+      }
+
+      form input[type="text"],
+      form input[type="email"],
+      form textarea,
+      form select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      form textarea {
+        resize: vertical;
+      }
+
+      form button {
+        background-color: #FF6347;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        width: 48%;
+        text-align: center;
+      }
+
+      form button:hover {
+        background-color: #e6533b;
+      }
+
+      /* Додатковий стиль для оцінки товару */
+      select {
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%;
+        margin-top: 5px;
+        font-size: 1em;
+      }
+
+      select option {
+        font-size: 1em;
+      }
+    </style>
+    <title>Купи слона</title>
+  </head>
+  <body>
+    <h4> Фонова музика</h4>
+    <audio src="https://allclassica.com/embed/18653/" controls></audio>
+    <h3>Наше розташування</h3>
+    <div style="width: 100%">
+      <iframe width="100%" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=500&amp;hl=en&amp;q=Chornobyl+(My%20Business%20Name)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps handsets</a></iframe>
+    </div>
+    <h3>Відео-огляд товарів</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/KBi-A7pY6SA?si=SXdjF6OkSv2PCB9X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h2>Прайс-лист</h2>
+    <table>
+      <tr>
+        <th>Товар</th>
+        <th>Ціна</th>
+        <th>Наявність</th>
+      </tr>
+      <tr>
+        <td>рожеві слоники</td>
+        <td>10000грн</td>
+        <td>Є в наявності</td>
+      </tr>
+      <tr>
+        <td>зелені слоники</td>
+        <td>50грн</td>
+        <td>Немає в наявності</td>
+      </tr>
+      <tr>
+        <td>червоні слоники</td>
+        <td>3000грн</td>
+        <td>Є в наявності</td>
+      </tr>
+    </table>
+
+    <h3>Залишити відгук</h3>
+    <form action="#" method="POST">
+      <p>
+        <label for="name">Ім'я:</label><br>
+        <input type="text" id="name" name="name" required minlength="2">
+      </p>
+      <p>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required>
+      </p>
+      <p>
+        <label for="review">Ваш відгук:</label><br>
+        <textarea id="review" name="review" rows="4" cols="50"></textarea>
+      </p>
+      <p>
+        <label for="rating">Оцініть якість товару:</label><br>
+        <select id="rating" name="rating">
+          <option value="" disabled selected>Оберіть варіант</option>
+          <option value="5">5 - Відмінно</option>
+          <option value="4">4 - Добре</option>
+          <option value="3">3 - Задовільно</option>
+          <option value="2">2 - Погано</option>
+          <option value="1">1 - Жахливо</option>
+        </select>
+      </p>
+      <p>
+        <button type="reset">Очистити</button>
+        <button type="submit">Надіслати</button>
+      </p>
+    </form>
+
+    <h1>Тут можна придбати абсолютно різних слоників!</h1>
+    <h5>Зв'язатися з нами</h5>
+    <p>Більше інформації дивіться на нашій офіційній сторінці</p>
+    <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjl_NuRn8CLAxVgnWgJHQhQH1IYABAJGgJ3Zg&ae=2&aspm=1&co=1&ase=5&gclid=EAIaIQobChMI5fzbkZ_AiwMVYJ1oCR0IUB9SEAAYASAAEgIYPfD_BwE&ohost=www.google.com&cid=CAASJeRo-Vb-crVz8yHxJ3_SIE0TGq3damBP3Fki0VnrLshAcBL9XTw&sig=AOD64_2YaZqKbJ1WTUG6yPgkS56gjg3G1g&q&adurl&ved=2ahUKEwjD7daRn8CLAxUBSvEDHf_yMOIQ0Qx6BAgIEAE">Офіційний сайт магазину</a>
+    <h4>Як зробити замовлення</h4>
+    <ol>
+      <li>Обрати категорію та знайти товар</li>
+      <li>Додати товар у кошик</li>
+    </ol>
+    <hr>
+    <h2>Магазин з найкращими слонами</h2>
+    <p>У нашому магазині великий вибір товару, найкраща продукція.</p>
+    <p>Здорові, якісні, сильні слоники по якісній ціні! Всі наші слони здорові та сильні.</p>
+    <h3>Категорії товарів</h3>
+    <img src="https://assets.onecompiler.app/436w3acc3/436w3hs9s/hifhwerfi.jpg" alt="Логотип магазину" width="100" height="100">
+    <ul>
+      <li>Рожеві слони</li>
+      <li>Зелений слоник</li>
+      <li>Українські слони</li>
+    </ul>
+  </body>
+</html>
